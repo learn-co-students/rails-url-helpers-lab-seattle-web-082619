@@ -1,0 +1,20 @@
+<h1> Add a New Student </h1>
+
+<%# on the FORM_SUBMIT action it will call the CREATE() method on the student controller %>
+<%= form_for @student do |f| %>
+    <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+    </p>
+    <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %> 
+    </p>
+    <p>
+        <%= f.label :active %>
+        <%= f.check_box :active %> 
+    </p>
+    <p>
+        <%= f.submit "Add New Student" %>
+    </p>    
+<% end %>
